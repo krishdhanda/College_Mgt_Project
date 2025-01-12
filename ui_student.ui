@@ -1,0 +1,6058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1256</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">*{
+color:000;
+border: none;
+}
+#leftmenu{
+	background-color: rgb(53, 255, 242);
+}
+#mainbody{
+	background-color: rgb(230, 230, 230);
+}
+QPushButton{
+
+padding:10px 5px;
+text-align: left;
+}
+
+QPushButton:hover{
+ background-color:#fefeff;
+ padding:10px 5px;
+ text-align: left;
+ border-top-left-radius:20px;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="leftmenu" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="teachername">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>211</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Learn Clean</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="feedback_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>350</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Feedback</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/meh.svg</normaloff>:/blueIcon/iconsblue/meh.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="marks_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>290</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>View Marks</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/file-text.svg</normaloff>:/blueIcon/iconsblue/file-text.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="home_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>110</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Home</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/home.svg</normaloff>:/blueIcon/iconsblue/home.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="attendance_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>230</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Attendance</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/edit.svg</normaloff>:/blueIcon/iconsblue/edit.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="logout_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>687</y>
+            <width>241</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Logout</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/log-out.svg</normaloff>:/blueIcon/iconsblue/log-out.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="resource_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>410</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Resource</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/plus-square.svg</normaloff>:/blueIcon/iconsblue/plus-square.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="settings_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>470</y>
+            <width>241</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Settings</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/settings.svg</normaloff>:/blueIcon/iconsblue/settings.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="subject_btn">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>170</y>
+            <width>241</width>
+            <height>38</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Subjects</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource2.qrc">
+            <normaloff>:/blueIcon/iconsblue/book-open.svg</normaloff>:/blueIcon/iconsblue/book-open.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainbody" native="true">
+      <property name="styleSheet">
+       <string notr="true">
+#pushButton_6:hover{
+	background-color: rgb(255, 255, 0);
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(226, 226, 226);</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="profiletab">
+          <attribute name="title">
+           <string>Profile</string>
+          </attribute>
+          <widget class="QFrame" name="frame_8">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>841</width>
+             <height>411</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(188, 188, 188);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QFrame" name="image">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>40</y>
+              <width>201</width>
+              <height>251</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+  
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="update">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>310</y>
+              <width>171</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 85, 255);</string>
+            </property>
+            <property name="text">
+             <string>Update Profile Photo</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l4">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>140</y>
+              <width>111</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>D.O.B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l1">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>60</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l6">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>270</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Semester</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l7">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>220</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Department</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l2">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>20</y>
+              <width>221</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Registration Number</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l9">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>350</y>
+              <width>181</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Contact  Number</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l5">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>180</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Address</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l3">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>310</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="l8">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>100</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Gender</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p1">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>23</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p2">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>60</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p3">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>100</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p5">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>185</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p6">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>225</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p4">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>140</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p7">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>270</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p8">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>310</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="p9">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>350</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="upcominglecture">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>450</y>
+             <width>261</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: relative;
+  
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  
+background-color: rgb(229, 51, 63);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_54">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>241</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+color: rgb(71, 71, 71);</string>
+            </property>
+            <property name="text">
+             <string>UPCOMING LECTURE</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_22">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>211</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="topic">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>450</y>
+             <width>261</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: relative;
+  
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+background-color: rgb(35, 134, 255);
+
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_55">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>211</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+color: rgb(71, 71, 71);</string>
+            </property>
+            <property name="text">
+             <string>Events</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_23">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>211</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="syllabus">
+           <property name="geometry">
+            <rect>
+             <x>600</x>
+             <y>450</y>
+             <width>261</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: relative;
+  
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+background-color: rgb(252, 255, 79);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLineEdit" name="lineEdit_24">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>211</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_56">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>211</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+color: rgb(71, 71, 71);</string>
+            </property>
+            <property name="text">
+             <string>Year</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Subjects</string>
+          </attribute>
+          <widget class="QFrame" name="frame_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>891</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+position: relative;
+  width: 350px;
+  height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="lhead_2">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>45</y>
+              <width>801</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+background: #1DA1F2;
+
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lhead_3">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>80</y>
+              <width>361</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+            </property>
+            <property name="text">
+             <string>Subjects</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur1_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>328</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>CE 5101</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur5_7">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>490</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_6">
+            <property name="geometry">
+             <rect>
+              <x>870</x>
+              <y>270</y>
+              <width>1</width>
+              <height>240</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_65">
+            <property name="geometry">
+             <rect>
+              <x>158</x>
+              <y>279</y>
+              <width>131</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur4_7">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>450</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_76">
+            <property name="geometry">
+             <rect>
+              <x>445</x>
+              <y>280</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Type</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur3_7">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>410</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>20</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur2_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>368</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>CE 5102</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur1_4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>330</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>1st</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_36">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>520</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur1_5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>330</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Core</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_3">
+            <property name="geometry">
+             <rect>
+              <x>438</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_38">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur2_6">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>370</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_2">
+            <property name="geometry">
+             <rect>
+              <x>298</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_35">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>400</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_68">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>448</y>
+              <width>121</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>ICIT</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur5_5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>490</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Core</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_74">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>488</y>
+              <width>121</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Physics</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur3_4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>410</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>1st</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur5_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>488</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>CE 5105</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur2_4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>370</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>1st</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_72">
+            <property name="geometry">
+             <rect>
+              <x>328</x>
+              <y>279</y>
+              <width>91</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Semester</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur5_6">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>490</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_32">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>480</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur1_6">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>330</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur1_7">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>330</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>148</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur4_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>448</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>CE 5104</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_5">
+            <property name="geometry">
+             <rect>
+              <x>715</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_4">
+            <property name="geometry">
+             <rect>
+              <x>575</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_71">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>374</y>
+              <width>131</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Technical Com.</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_73">
+            <property name="geometry">
+             <rect>
+              <x>19</x>
+              <y>279</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Code</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur2_5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>370</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Core</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_75">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>330</y>
+              <width>121</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Mathematics</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur3_5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>410</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Core/Practical</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_77">
+            <property name="geometry">
+             <rect>
+              <x>580</x>
+              <y>280</y>
+              <width>131</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Theory Marks</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_78">
+            <property name="geometry">
+             <rect>
+              <x>720</x>
+              <y>280</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Practical Marks</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_7">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur3_3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>408</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>CE 5103</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur4_4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>450</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>1st</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur2_7">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>370</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_33">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>360</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur5_4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>490</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>1st</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_70">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>408</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>C Language</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur3_6">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>410</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>80</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur4_6">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>450</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_31">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>320</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ur4_5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>450</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Core</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line_37">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>440</y>
+              <width>862</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="umarkstab">
+          <attribute name="title">
+           <string>View Marks</string>
+          </attribute>
+          <widget class="QFrame" name="frame_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>891</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: relative;
+width: 350px;
+height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+border-radius: 20px;
+box-sizing: border-box;
+background: #ecf0f3;
+box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QFrame" name="upcominglecture_2">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>40</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="mathb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}
+QPushButton:clicked{
+		color: rgb(0,0,0);
+}</string>
+             </property>
+             <property name="text">
+              <string>Mathematics</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Ms. Niti Shah</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_10">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5101</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_6">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>472</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="phyb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Physics</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_17">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_18">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Harman Singh</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_19">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5105</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_4">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>260</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="cb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Programming with C</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_12">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Muthu Manavandi</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_13">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5103</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_3">
+            <property name="geometry">
+             <rect>
+              <x>480</x>
+              <y>40</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="tcb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>311</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Technical Communication</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Bhavin Trivedi</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_11">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5102</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_5">
+            <property name="geometry">
+             <rect>
+              <x>480</x>
+              <y>260</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="icitb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>ICIT</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_14">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_15">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Ms. Kavita Nayak</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_16">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5104</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>sub1</string>
+          </attribute>
+          <widget class="QLabel" name="lhead_4">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Assessment-Details</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_5">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>41</y>
+             <width>811</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>11</y>
+             <width>881</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #ecf0f3;
+border-radius:15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableSub1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>861</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideMiddle</enum>
+           </property>
+          </widget>
+          <zorder>label_20</zorder>
+          <zorder>lhead_5</zorder>
+          <zorder>lhead_4</zorder>
+          <zorder>tableSub1</zorder>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>sub2</string>
+          </attribute>
+          <widget class="QLabel" name="label_21">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>11</y>
+             <width>881</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #ecf0f3;
+border-radius:15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_6">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>41</y>
+             <width>811</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_7">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Assessment-Details</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableSub2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>861</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideMiddle</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>sub3</string>
+          </attribute>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>11</y>
+             <width>881</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #ecf0f3;
+border-radius:15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_8">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>41</y>
+             <width>811</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_9">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Assessment-Details</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableSub3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>861</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideMiddle</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_6">
+          <attribute name="title">
+           <string>sub4</string>
+          </attribute>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>11</y>
+             <width>881</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #ecf0f3;
+border-radius:15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_10">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>41</y>
+             <width>811</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_11">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Assessment-Details</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableSub4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>861</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideMiddle</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_7">
+          <attribute name="title">
+           <string>sub5</string>
+          </attribute>
+          <widget class="QLabel" name="label_24">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>11</y>
+             <width>881</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #ecf0f3;
+border-radius:15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_12">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>41</y>
+             <width>811</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lhead_13">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>441</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>25</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Assessment-Details</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableSub5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>290</y>
+             <width>861</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideMiddle</enum>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="attendancetab">
+          <property name="maximumSize">
+           <size>
+            <width>867</width>
+            <height>736</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(227, 227, 227);</string>
+          </property>
+          <attribute name="title">
+           <string>Attendance</string>
+          </attribute>
+          <widget class="QFrame" name="frame_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>871</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+position: relative;
+  width: 350px;
+  height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="lhead_14">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>45</y>
+              <width>801</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+background: #1DA1F2;
+
+
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lhead_15">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>81</y>
+              <width>421</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:15px;
+
+
+
+</string>
+            </property>
+            <property name="text">
+             <string>Attendence Report</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_66">
+            <property name="geometry">
+             <rect>
+              <x>152</x>
+              <y>279</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Date of Lecture</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_79">
+            <property name="geometry">
+             <rect>
+              <x>444</x>
+              <y>280</y>
+              <width>121</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Code</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_39">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>520</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_9">
+            <property name="geometry">
+             <rect>
+              <x>438</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_40">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_10">
+            <property name="geometry">
+             <rect>
+              <x>298</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_41">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>400</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_81">
+            <property name="geometry">
+             <rect>
+              <x>340</x>
+              <y>279</y>
+              <width>51</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Time</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_34">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>480</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_11">
+            <property name="geometry">
+             <rect>
+              <x>148</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_12">
+            <property name="geometry">
+             <rect>
+              <x>715</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_13">
+            <property name="geometry">
+             <rect>
+              <x>575</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_83">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>279</y>
+              <width>91</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Serial No</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_85">
+            <property name="geometry">
+             <rect>
+              <x>582</x>
+              <y>280</y>
+              <width>131</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_86">
+            <property name="geometry">
+             <rect>
+              <x>720</x>
+              <y>280</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Percentage</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_14">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>270</y>
+              <width>1</width>
+              <height>250</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_42">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>360</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_43">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>320</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_44">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>440</y>
+              <width>841</width>
+              <height>1</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_8">
+            <property name="geometry">
+             <rect>
+              <x>850</x>
+              <y>270</y>
+              <width>1</width>
+              <height>249</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sn1">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sn2">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>370</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sn3">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sn4">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sn5">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="d1">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>15-01-2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="d2">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>370</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>15-01-2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="d3">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>15-01-2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="d4">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>15-01-2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="d5">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>15-01-2023</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="t1">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>11:15 AM</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="t2">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>370</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>11:15 AM</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="t3">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>11:15 AM</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="t4">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>11:15 AM</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="t5">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>11:15 AM</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sc1">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>CE 5101</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sc2">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>370</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>CE 5102</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sc3">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>CE 5103</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sc4">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>CE 5104</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sc5">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>CE 5105</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="su1">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>Mathematics</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="su2">
+            <property name="geometry">
+             <rect>
+              <x>580</x>
+              <y>370</y>
+              <width>131</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>Technical Com.</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="su3">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>C Language</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="su4">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>ICIT</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="su5">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>Physics</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pe1">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>330</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>100%</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pe2">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>370</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>0%</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pe3">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>410</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>100%</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pe4">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>450</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>0%</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="pe5">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>490</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;
+</string>
+            </property>
+            <property name="text">
+             <string>100%</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="feedbacktab">
+          <attribute name="title">
+           <string>Feedback</string>
+          </attribute>
+          <widget class="QFrame" name="frame_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>891</width>
+             <height>701</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: relative;
+width: 350px;
+height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+border-radius: 20px;
+box-sizing: border-box;
+background: #ecf0f3;
+box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QFrame" name="upcominglecture_7">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>40</y>
+              <width>351</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="fmathb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>341</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}
+QPushButton:clicked{
+		color: rgb(0,0,0);
+}</string>
+             </property>
+             <property name="text">
+              <string>Mathematics Feedback</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_25">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_26">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Ms. Niti Shah</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_27">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5101</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_8">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>472</y>
+              <width>341</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="fphyb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Physics Feedback</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_28">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_29">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Harman Singh</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_30">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5105</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_9">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>260</y>
+              <width>351</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="fcb">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>351</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Programming with C Feedback</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_31">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_32">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Muthu Manavandi</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_33">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5103</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_10">
+            <property name="geometry">
+             <rect>
+              <x>480</x>
+              <y>40</y>
+              <width>351</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="ftcb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>351</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Technical Com Feedback</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_39">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_41">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Mr. Bhavin Trivedi</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_42">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5102</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="upcominglecture_11">
+            <property name="geometry">
+             <rect>
+              <x>480</x>
+              <y>260</y>
+              <width>351</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: relative;
+border:1px solid rgb(175, 175, 175);
+border-radius: 20px;
+box-sizing: border-box;
+background-color: rgb(123, 147, 198);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="ficitb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>261</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border:none;	
+}
+QPushButton:hover{
+	color: rgb(255, 255, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>ICIT Feedback</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_43">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>50</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>BCA I Semester</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_44">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>120</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Faculty: Ms. Kavita Nayak</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_45">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>90</y>
+               <width>241</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>Subject code: CE 5104</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_8">
+          <attribute name="title">
+           <string>feed1</string>
+          </attribute>
+          <widget class="QFrame" name="frame_7">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>20</y>
+             <width>441</width>
+             <height>681</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+position: relative;
+  width: 350px;
+  height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_50">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>50</y>
+              <width>221</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border-radius: 50%;
+border:none;
+ </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>jims_logo.webp</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_51">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>250</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Communication Skills</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_52">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>320</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Control on Class</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_53">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>390</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Knowledge</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_57">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>460</y>
+              <width>181</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Dought Clearing</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_58">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>530</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Punctuality</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb1">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>250</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb2">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>320</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb3">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>390</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb4">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>460</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb5">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>530</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="subf1_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>580</y>
+              <width>151</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>99</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white;
+  margin-top: 20px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+text-align:center;
+</string>
+            </property>
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_9">
+          <attribute name="title">
+           <string>feed2</string>
+          </attribute>
+          <widget class="QFrame" name="frame_9">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>20</y>
+             <width>441</width>
+             <height>681</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+position: relative;
+  width: 350px;
+  height: 500px;
+border:1px solid rgb(175, 175, 175);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_59">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>50</y>
+              <width>221</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border-radius: 50%;
+border:none;
+ </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>jims_logo.webp</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_60">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>250</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Communication Skills</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_61">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>320</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Control on Class</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_62">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>390</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Subject Knowledge</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_63">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>460</y>
+              <width>181</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Dought Clearing</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_64">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>530</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Punctuality</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb11">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>250</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb22">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>320</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb33">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>390</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb44">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>460</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb55">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>530</y>
+              <width>151</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>Excellent</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Good</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poor</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="subf2_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>580</y>
+              <width>151</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <weight>99</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white;
+  margin-top: 20px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+text-align:center;
+</string>
+            </property>
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Settings</string>
+          </attribute>
+          <widget class="QLabel" name="lhead">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>861</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>24</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:17px;</string>
+           </property>
+           <property name="text">
+            <string>Settings Section</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ltop">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>120</y>
+             <width>321</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:17px;</string>
+           </property>
+           <property name="text">
+            <string>Your Credentials</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="licon">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>120</y>
+             <width>51</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:17px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource2.qrc">:/blueIcon/iconsblue/codepen.svg</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_13">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>190</y>
+             <width>341</width>
+             <height>121</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="lp">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Password: ashu</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lu">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Username: ashu@mail.com</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resource2.qrc"/>
+ </resources>
+ <connections/>
+</ui>
