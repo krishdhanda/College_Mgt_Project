@@ -15,7 +15,7 @@ This interface is only for students and it also provides multiple menu options l
 
 ## Step 4) : For Faculty login you can run ui_teacher.py!
 
-This ui interface is only for faculty and faculty can mark student attendance, upload student marks etc.'
+This ui interface is only for the faculty and they can mark student's attendance, upload the marks etc.'
 
 
 
